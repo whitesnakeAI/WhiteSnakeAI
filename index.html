@@ -12,50 +12,45 @@
             padding: 0;
             background-color: #0f172a;
             color: #f8fafc;
-            text-align: center;
         }
 
         header {
             background-color: #1e293b;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
-            font-size: 2.5em;
             margin: 0;
             color: #38bdf8;
         }
 
-        .hero {
-            padding: 50px 20px;
-            background-image: url('hero-background.jpg'); /* Placeholder */
-            background-size: cover;
-            background-position: center;
+        nav {
+            display: flex;
+            gap: 15px;
         }
 
-        .hero h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
+        nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 1em;
         }
 
-        .hero p {
-            font-size: 1.2em;
-            line-height: 1.5;
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        .features {
-            padding: 40px 20px;
-        }
-
-        .features .feature {
-            margin: 20px auto;
-            max-width: 800px;
+        .content {
+            padding: 20px;
         }
 
         footer {
             background-color: #1e293b;
             padding: 20px;
-            font-size: 0.9em;
+            text-align: center;
+            margin-top: 20px;
         }
 
         footer a {
@@ -71,28 +66,35 @@
 <body>
     <header>
         <h1>White Snake AI</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#home">Home</a>
+        </nav>
     </header>
 
-    <section class="hero">
-        <h2>The Crypto Revolution of 2025</h2>
-        <p>White Snake AI combines ancient wisdom and modern technology to deliver a meme coin like no other. Inspired by the Chinese Year of the Snake, this coin slithers ahead with AI-powered intelligence and adaptability.</p>
-    </section>
+    <main class="content">
+        <section id="home">
+            <h2>Welcome to White Snake AI</h2>
+            <p>Welcome to the cutting-edge fusion of ancient wisdom and advanced technology. White Snake AI, inspired by the Chinese Year of the Snake 2025, is a crypto revolution embodying adaptability, intelligence, and transformation. Whether you're a seasoned trader or new to the crypto world, White Snake AI provides the tools you need to slither ahead in the digital economy.</p>
+        </section>
 
-    <section class="features">
-        <h2>Why Choose White Snake AI?</h2>
-        <div class="feature">
-            <h3>🔮 AI-Powered Insights</h3>
-            <p>Leverage the power of artificial intelligence for smart trading and predictive analytics.</p>
-        </div>
-        <div class="feature">
-            <h3>🐍 Symbol of Transformation</h3>
-            <p>Inspired by the 2025 Chinese Year of the Snake, embodying adaptability and resilience.</p>
-        </div>
-        <div class="feature">
-            <h3>🚀 Community-Driven Growth</h3>
-            <p>Join a vibrant community pushing the boundaries of meme coins and decentralized tech.</p>
-        </div>
-    </section>
+        <section id="about">
+            <h2>About White Snake AI</h2>
+            <p>White Snake AI isn’t just another meme coin—it’s a movement. Rooted in the symbolism of the snake as a creature of transformation and strategy, we’ve combined this ethos with the power of artificial intelligence. Our coin offers smart analytics, predictive trading tools, and a vibrant community ready to shape the future of decentralized technology.</p>
+            <p><strong>Why the Year of the Snake?</strong> In 2025, the Year of the Snake represents agility, intelligence, and renewal. These qualities resonate deeply with our mission to empower users in the ever-changing crypto landscape.</p>
+        </section>
+
+        <section id="roadmap">
+            <h2>Roadmap</h2>
+            <ul>
+                <li><strong>Q1 2025:</strong> Launch White Snake AI coin and introduce the official platform.</li>
+                <li><strong>Q2 2025:</strong> Deploy AI-driven trading assistant tools, empowering users with smarter investment insights.</li>
+                <li><strong>Q3 2025:</strong> Establish partnerships with leading blockchain projects and expand community governance.</li>
+                <li><strong>Q4 2025:</strong> Scale globally with integrations into DeFi platforms and community-driven expansions.</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 White Snake AI. All rights reserved. | <a href="#">GitHub Repository</a></p>
