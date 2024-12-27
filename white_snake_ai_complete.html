@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Snake AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        header {
+            background-color: #1e293b;
+            padding: 20px;
+            display: flex;            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .chatroom {
+            border: 1px solid #38bdf8;
+            padding: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #1e293b;
+            border-radius: 5px;
+        }
+
+        .chatroom ul {
+            list-style: none;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .chatroom ul li {
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            background-color: #0f172a;
+        }
+
+        .chatroom form {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .chatroom input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #38bdf8;
+            border-radius: 3px;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .chatroom button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            background-color: #38bdf8;
+            color: #f8fafc;
+            cursor: pointer;
+        }
+
+        .chatroom button:hover {
+            background-color: #0ea5e9;
+        }
+
+        footer {
+            background-color: #1e293b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // Chatroom functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatForm = document.getElementById('chat-form');
+            const chatInput = document.getElementById('chat-input');
+            const chatMessages = document.getElementById('chat-messages');
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const message = chatInput.value.trim();
+                if (message) {
+                    const messageItem = document.createElement('li');
+                    messageItem.textContent = `Anonymous: ${message}`;
+                    chatMessages.appendChild(messageItem);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    chatInput.value = '';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>White Snake AI</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#chatroom">Chatroom</a>
+            <a href="#home">Home</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="home">
+            <h2>Welcome to White Snake AI</h2>
+            <p>Welcome to the cutting-edge fusion of ancient wisdom and advanced technology. White Snake AI, inspired by the Chinese Year of the Snake 2025, is a crypto revolution embodying adaptability, intelligence, and transformation. Whether you're a seasoned trader or new to the crypto world, White Snake AI provides the tools you need to slither ahead in the digital economy.</p>
+        </section>
+
+        <section id="about">
+            <h2>About White Snake AI</h2>
+            <p>White Snake AI isn’t just another meme coin—it’s a movement. Rooted in the symbolism of the snake as a creature of transformation and strategy, we’ve combined this ethos with the power of artificial intelligence. Our coin offers smart analytics, predictive trading tools, and a vibrant community ready to shape the future of decentralized technology.</p>
+            <p><strong>Why the Year of the Snake?</strong> In 2025, the Year of the Snake represents agility, intelligence, and renewal. These qualities resonate deeply with our mission to empower users in the ever-changing crypto landscape.</p>
+        </section>
+
+        <section id="roadmap">
+            <h2>Roadmap</h2>
+            <ul>
+                <li><strong>Q1 2025:</strong> Launch White Snake AI coin and introduce the official platform.</li>
+                <li><strong>Q2 2025:</strong> Deploy AI-driven trading assistant tools, empowering users with smarter investment insights.</li>
+                <li><strong>Q3 2025:</strong> Establish partnerships with leading blockchain projects and expand community governance.</li>
+                <li><strong>Q4 2025:</strong> Scale globally with integrations into DeFi platforms and community-driven expansions.</li>
+            </ul>
+        </section>
+
+        <section id="chatroom" class="chatroom">
+            <h2>Public Chatroom</h2>
+            <p>Join the conversation! Discuss crypto trends, White Snake AI updates, and connect with fellow enthusiasts in our global community.</p>
+            <ul id="chat-messages">
+                <!-- Chat messages will appear here -->
+            </ul>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 White Snake AI. All rights reserved. | <a href="#">GitHub Repository</a></p>
+    </footer>
+</body>
+</html>
